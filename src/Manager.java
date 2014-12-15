@@ -33,4 +33,16 @@ public class Manager extends Employee
   {
     department=dept;
   }
+   public boolean equals(Object obj)
+  {
+    if(obj instanceof Manager )
+    {
+      Manager other= (Manager) obj;
+      return directReports== other.directReports && department==other.department;
+    }
+    else
+    {
+      return false;
+    }
+  }
 }
