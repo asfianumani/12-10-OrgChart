@@ -36,4 +36,16 @@ public class Person
   {
     age++;
   }
+  public boolean equals(Object obj)
+  {
+    if(obj instanceof Person)
+    {
+      Person p= (Person) obj;
+      return firstname==p.firstname && lastname==p.lastname && age==p.age ;
+    }
+    else
+    {
+      return false;
+    }
+  }
 }
