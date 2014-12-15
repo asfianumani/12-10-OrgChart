@@ -58,7 +58,18 @@ public class Employee extends Person
   {
     manager=newManager;
   }
-  
+   public boolean equals(Object obj)
+  {
+    if(obj instanceof Employee)
+    {
+      Employee other= (Employee) obj;
+      return hourlyWage==other.hourlyWage && hoursWorked==other.hoursWorked && jobTitle==other.jobTitle && manager==other.manager;
+    }
+    else
+    {
+      return false;
+    }
+  }
 }
   
   
